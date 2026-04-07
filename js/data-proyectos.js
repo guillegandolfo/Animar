@@ -1,6 +1,6 @@
 // js/data-proyectos.js
 // Aquí es donde puedes agregar, editar o eliminar proyectos.
-// Sigue el formato exacto del bloque definido a continuación.
+// Sigue el formato exacto del bloque definido a continuación
 
 const proyectosData = [
     {
