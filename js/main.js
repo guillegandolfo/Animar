@@ -1,9 +1,44 @@
 // js/main.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Si estamos en la página de proyectos, renderizamos los datos
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+    const navOverlay = document.getElementById('nav-overlay');
+
+    if (mobileMenuBtn && navMenu) {
+        function toggleMenu() {
+            mobileMenuBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking on a link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('active')) toggleMenu();
+            });
+        });
+    }
+
+    // Scroll Header Effect
+    const header = document.querySelector('.glass-header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.style.padding = '0.5rem 0';
+            header.style.background = 'rgba(10, 10, 10, 0.95)';
+        } else {
+            header.style.padding = '0';
+            header.style.background = 'var(--glass-bg)';
+        }
+    });
+
+    // Render Projects
     const galleryContainer = document.getElementById('projects-gallery-container');
-    
     if (galleryContainer) {
         renderProjects(galleryContainer);
     }

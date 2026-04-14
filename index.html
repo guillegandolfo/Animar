@@ -13,13 +13,19 @@
         <div class="header-container">
             <a class="logo" href="index.html"><img src="img/animar_logo.png" alt="Animar Logo" class="header-logo-img" /> ANIMAR<span class="dot">.</span></a>
             <nav>
-                <ul class="nav-links">
+                <div class="mobile-menu-toggle" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="nav-menu">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="servicios.html">Servicios</a></li>
                     <li><a href="proyectos.html">Proyectos</a></li>
                     <li><a href="contacto.html" class="btn-primary">Contacto</a></li>
                 </ul>
             </nav>
+            <div class="nav-overlay" id="nav-overlay"></div>
         </div>
     </header>
 
@@ -38,8 +44,24 @@
 
         <section class="about-section animate-up">
             <div class="container">
-                <h2>Sobre Nosotros</h2>
-                <p>Somos una empresa dedicada a la construcción integral, especialistas en transformar ideas en realidades estructurales firmes. Contamos con años de experiencia en el rubro garantizando durabilidad y estética en cada metro cuadrado.</p>
+                <h2 class="section-title">Sobre <span class="accent">Nosotros</span></h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p class="lead-text">Excelencia y compromiso en cada m².</p>
+                        <p>Somos <strong>Animar S.R.L.</strong>, una empresa dedicada a la <strong>construcción integral</strong>, especialistas en transformar ideas en realidades estructurales firmes. Nuestro equipo combina experiencia técnica con una visión moderna para garantizar que cada obra supere las expectativas de nuestros clientes.</p>
+                        <p>Contamos con años de trayectoria en el rubro, basando nuestro éxito en tres pilares fundamentales: seguridad, calidad constructiva y cumplimiento de plazos.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">+10</span>
+                            <span class="stat-label">Años de Exp.</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">+50</span>
+                            <span class="stat-label">Obras Finalizadas</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
